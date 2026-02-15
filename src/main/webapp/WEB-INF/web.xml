@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
+         http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         version="4.0">
+
+  <display-name>OceanViewResort</display-name>
+
+  <welcome-file-list>
+    <welcome-file>login.jsp</welcome-file>
+  </welcome-file-list>
+
+  <session-config>
+    <session-timeout>30</session-timeout>
+  </session-config>
+
+  <servlet>
+    <servlet-name>AuthController</servlet-name>
+    <servlet-class>com.oceanview.controller.AuthController</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>AdminController</servlet-name>
+    <servlet-class>com.oceanview.controller.AdminController</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>StaffController</servlet-name>
+    <servlet-class>com.oceanview.controller.StaffController</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>DashboardController</servlet-name>
+    <servlet-class>com.oceanview.controller.DashboardController</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>AuthController</servlet-name>
+    <url-pattern>/auth</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AdminController</servlet-name>
+    <url-pattern>/admin</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>StaffController</servlet-name>
+    <url-pattern>/staff</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DashboardController</servlet-name>
+    <url-pattern>/dashboard</url-pattern>
+  </servlet-mapping>
+
+</web-app>
