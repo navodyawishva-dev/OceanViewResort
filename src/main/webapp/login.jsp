@@ -91,7 +91,7 @@
         </div>
         <div class="card-body p-4">
 
-            <%-- Success message from signup or logout --%>
+
             <% String message = request.getParameter("message"); %>
             <% if ("loggedout".equals(message)) { %>
             <div class="alert alert-success">
